@@ -8,7 +8,7 @@ This project was completed for the *Advanced Data Analytics Algorithms* unit at 
 
 ## Why this problem matters
 
-In credit-card-default prediction, the two error types are not equally expensive. Approving a defaulter (false negative) costs the bank the entire lent amount times the loss-given-default rate; rejecting a good customer (false positive) costs only the foregone interest margin. The standard machine-learning workflow optimises cross-entropy and uses a 0.50 decision threshold — implicitly assuming symmetric costs. This project quantifies what that assumption costs and shows how to fix it without changing the model.
+In credit-card-default prediction, the two error types are not equally expensive. Approving a defaulter (false negative) costs the bank the entire lent amount times the loss-given-default rate; rejecting a good customer (false positive) costs only the foregone interest margin. The standard machine-learning workflow optimises cross-entropy and uses a 0.50 decision threshold, implicitly assuming symmetric costs. This project quantifies what that assumption costs and shows how to fix it without changing the model.
 
 ---
 
