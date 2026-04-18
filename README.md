@@ -1,6 +1,6 @@
 # Credit Card Default Prediction — Cost-Sensitive Classification
 
-> **TL;DR** — Trained seven classifiers on a credit-card-default dataset, tuned the best (LightGBM) to **ROC-AUC 0.994**, then used real-world Federal Reserve and ECB cost data to derive a **cost-optimal decision threshold** that **cuts misclassification cost by 64%** vs. the standard 0.50 threshold. The empirically-derived optimum (t ≈ 0.10) closely matches the decision-theoretic prediction (t* ≈ 0.116) — evidence that the model produces well-calibrated probabilities.
+> **TL;DR** — Trained seven classifiers on a credit-card-default dataset, tuned the best (LightGBM) to **ROC-AUC 0.994**, then used real-world Federal Reserve and ECB cost data to derive a **cost-optimal decision threshold** that **cuts misclassification cost by 64%** vs. the standard 0.50 threshold. The empirically-derived optimum (t ≈ 0.10) closely matches the decision-theoretic prediction (t* ≈ 0.116), evidence that the model produces well-calibrated probabilities.
 
 This project was completed for the *Advanced Data Analytics Algorithms* unit at UTS, but it stands as a self-contained study in **cost-sensitive learning** for imbalanced binary classification.
 
@@ -36,7 +36,7 @@ Source: [`results/tuned_model_results.csv`](results/tuned_model_results.csv)
 | **Cost-optimal (this project)**    | **≈ 0.10**| **0.998** | **1**          | 352             | **91,239**     |
 | Reduction in expected loss         |           |        |                 |                 | **−71%**       |
 
-*A 71% reduction in expected misclassification cost — purely from re-deriving the decision threshold using real-world cost data, with no change to the model.* The decision-theoretic optimum derived from first principles is `t* = C_FP / (C_FP + C_FN) = 1/(1+7.56) ≈ 0.116`, which closely matches the empirical optimum.
+*A 71% reduction in expected misclassification cost, purely from re-deriving the decision threshold using real-world cost data, with no change to the model.* The decision-theoretic optimum derived from first principles is `t* = C_FP / (C_FP + C_FN) = 1/(1+7.56) ≈ 0.116`, which closely matches the empirical optimum.
 
 Source: [`results/no_smote_threshold_results.csv`](results/no_smote_threshold_results.csv)
 
@@ -95,7 +95,7 @@ Full write-up: [`reports/methodology.md`](reports/methodology.md). Original jour
 │   ├── tuned_model_results.csv     ← seven GridSearchCV-tuned models
 │   └── no_smote_threshold_results.csv  ← threshold sweep across 4 imbalance strategies
 │
-├── models/                         ← trained .pkl artefacts (gitignored — regenerate from notebook)
+├── models/                         ← trained .pkl artefact
 │
 └── reports/
     ├── methodology.md              ← extended methodology & analysis
