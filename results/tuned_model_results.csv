@@ -1,0 +1,8 @@
+Model,Best Params,Best CV ROC-AUC,Accuracy,Precision,Recall,F1-score,ROC-AUC
+AdaBoost,"{'learning_rate': 1.0, 'n_estimators': 200}",0.9969,0.959,0.687,0.9708,0.8046,0.9946
+XGBoost,"{'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200, 'subsample': 1.0}",0.9994,0.9695,0.7983,0.8694,0.8324,0.9941
+Random Forest,"{'max_depth': None, 'max_features': 'sqrt', 'min_samples_split': 2, 'n_estimators': 300}",0.9995,0.9697,0.7961,0.8756,0.8339,0.9941
+LightGBM,"{'learning_rate': 0.1, 'max_depth': -1, 'n_estimators': 200, 'num_leaves': 50, 'subsample': 0.8}",0.9996,0.974,0.8701,0.8233,0.8461,0.994
+Logistic Regression,"{'C': 1, 'solver': 'liblinear'}",0.9942,0.9516,0.6519,0.9524,0.774,0.9929
+SVM,"{'C': 10, 'gamma': 'auto', 'kernel': 'rbf'}",0.9963,0.9569,0.6948,0.8986,0.7837,0.9875
+KNN,"{'metric': 'manhattan', 'n_neighbors': 11, 'weights': 'distance'}",0.9964,0.9373,0.5936,0.8863,0.711,0.9682
